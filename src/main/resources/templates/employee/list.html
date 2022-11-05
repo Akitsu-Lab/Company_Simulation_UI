@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>社員一覧</h1>
+<table>
+    <thead>
+    <tr>
+        <th>社員ID</th>
+        <th>名前</th>
+        <th>年齢</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee : ${employeeList.employeeList}">
+        <td><a href="/ui/employee/edit?employeeId=-1"
+               th:text="${employee.employeeId}" class="idlink">-1</a></td>
+        <td th:text="${employee.employeeName}">test</td>
+        <td th:text="${employee.age}">test</td>
+    </tr>
+    </tbody>
+</table>
+<!--<a th:href="@{add}" id="addlink">新規登録</a>-->
+</body>
+</html>
