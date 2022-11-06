@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>社員一覧</title>
 </head>
 <body>
 <h1>社員一覧</h1>
-<table>
+<table class="table table-striped table-hover">
     <thead>
     <tr>
         <th>社員ID</th>
         <th>名前</th>
         <th>年齢</th>
+        <th>学歴</th>
+        <th>年収</th>
+        <th>企業ID</th>
+        <th>役職</th>
+        <th>職種</th>
     </tr>
     </thead>
     <tbody>
@@ -20,6 +31,11 @@
                th:text="${employee.employeeId}" class="idlink">-1</a></td>
         <td th:text="${employee.employeeName}">test</td>
         <td th:text="${employee.age}">test</td>
+        <td th:text="${employee.educationalBackground}">test</td>
+        <td th:text="${employee.annualIncome}">test</td>
+        <td th:text="${employee.companyId}">test</td>
+        <td th:text="${employee.position}">test</td>
+        <td th:text="${employee.jobTitle}">test</td>
     </tr>
     </tbody>
 </table>
